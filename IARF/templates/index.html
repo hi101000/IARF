@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('articles') }}">Articles</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('submission') }}">Submissions</a>
+        </div>
+        <h1 class="main-heading">Welcome to the Ishan is Always Right Foundation!</h1>
+        <p class="centered">Here at the Ishan is Always Right Foundation (or IARF, for short), we help correct all the stupid things people say, and make fun of them for the stupid things they do.</p>
+        <br>
+        <br>
+        <h2 class="centered">Who Are We?</h3>
+        <p class="para">
+            Well, this section is for people whose history teachers might be featured in an article here.
+            The Ishan is Always Right Foundation is an institution founded by the Ministry of Education of the People's Democratic Republic of Ishland.
+            We are a not-for-profit organization that is funded entirely by donations and Ishlandian taxes.
+            This Foundation was created for the purposes stated above (i.e. making fun of people for doing and saying stupid stuff, while also thoroughly debunking what they say or do).
+        </p>
+        <footer>&copy; Copyright 2024 IARF</footer>
+    </body>
+</html>

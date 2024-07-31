@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('articles') }}">Articles</a>
+            <a class="active" href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('submission') }}">Submissions</a>
+        </div>
+        <h1 class="main-heading">Contact Us</h1>
+        <br>
+        <p id="article">
+            You can contact us here:<br><br>
+            E-mail: <br>
+            Phone: <br>
+
+        </p>
+        <footer>&copy; Copyright 2024 IARF</footer>
+    </body>
+</html>
