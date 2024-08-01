@@ -57,11 +57,11 @@ def submit():
         file = request.files['content']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            os.system(f'touch {os.path.join(app.config['UPLOAD_FOLDER'], filename)}')
+            os.system(f"touch {os.path.join(app.config['UPLOAD_FOLDER'], filename)}")
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             split_tup = os.path.splitext(filename)
             ext = split_tup[1]
-            os.system(f'mv {os.path.join(app.config['UPLOAD_FOLDER'], filename)} {os.path.join(app.config['UPLOAD_FOLDER'], (request.form['title']+ext))}')
+            os.system(f"mv {os.path.join(app.config['UPLOAD_FOLDER'], filename)} {os.path.join(app.config['UPLOAD_FOLDER'], (request.form['title']+ext))}")
         con = sqlite3.connect("articles.db")
         cur = con.cursor()
         cur.execute(f"""
