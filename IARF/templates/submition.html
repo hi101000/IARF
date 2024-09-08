@@ -3,6 +3,13 @@
     <head>
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/checkmark-png-25954-Windows.ico') }}">
+        <style>
+            #submit{
+                background: #ad49ff;
+                color: #ffffff;
+                size: 40px;
+            }
+        </style>
     </head>
     <body>
         <div class="topnav" class="centered">
@@ -11,8 +18,9 @@
             <a href="{{ url_for('contact') }}">Contact</a>
             <a href="{{ url_for('about') }}">About</a>
             <a class="active" href="{{ url_for('submission') }}">Submissions</a>
+            <a href="{{ url_for('ASBOT') }}">Aevum</a>
         </div>
-        <h1 class="main-heading">Content Submition</h1>
+        <h1 class="main-heading">Content Submission</h1>
         <p>Here, you can submit content involving people doing or saying stupid stuff, so that it may be added to IARF's website.</p>
         <form action="{{ url_for('submit') }}" method="post" enctype="multipart/form-data">
             <label for="name">Submitter name (can be alias):</label><br>
@@ -22,7 +30,7 @@
             <label for="content">Select a file to attach content:</label><br>
             <input type="file" id="content" name="content"><br><br>
             <textarea name="description" rows="20" cols="15"></textarea><br>
-            <input type="submit">
+            <input type="submit" id="submit">
           </form>
         <footer>&copy; Copyright 2024 IARF</footer>
     </body>

@@ -1,0 +1,9 @@
+1. Add contact info to the contact page
+2. Potentially add contact form, depending on number of emails and stuff in first year of IARF running
+3. Set up server and domain name
+4. Write more articles
+5. Possibly change name for college
+6. Check out legality of putting faces and stuff
+7. Make the Submissions form work properly
+8. Ask for permission to use IARF name
+9. 

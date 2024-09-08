@@ -20,7 +20,12 @@ print("listening at: http://127.0.0.1:8080")
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    with open("visits.txt", "r") as f:
+        visits = int(f.read())
+        visits += 1
+    with open("visits.txt", "w") as f:
+        f.write(str(visits))
+    return render_template("index.html", vis = visits)
 
 @app.route('/articles')
 def articles():
@@ -36,7 +41,7 @@ def articles():
 
 @app.route("/articles/<folder>/<art>")
 def article(folder, art):
-    return render_template("article.html", fname=art, folder = folder)
+    return render_template("article.html", fname = art, folder = folder)
 
 @app.route('/contact')
 def contact():
@@ -74,3 +79,6 @@ def submit():
         con.close()
         return render_template("redirect_to.html", page="index")
     
+@app.route('/ASBOT')
+def ASBOT():
+    return render_template("ASBOT.html")
