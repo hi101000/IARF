@@ -79,8 +79,10 @@ def submit():
         con.close()
         return render_template("redirect_to.html", page="index")
     
+@app.route("/to_Selim")
+def to_selim():
+    return render_template("Selim.html")
+
 @app.route('/ASBOT')
 def ASBOT():
     return render_template("ASBOT.html")
-
-#test

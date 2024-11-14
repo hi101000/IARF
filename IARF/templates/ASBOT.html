@@ -3,7 +3,13 @@
     <head>
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/checkmark-png-25954-Windows.ico') }}">
-        <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+        <style>
+            #centered{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
     </head>
     <body>
         <div class="topnav">
@@ -12,25 +18,17 @@
             <a href="{{ url_for('contact') }}">Contact</a>
             <a href="{{ url_for('about') }}">About</a>
             <a href="{{ url_for('submission') }}">Submissions</a>
-            <a class="active"href="{{ url_for('ASBOT') }}">Aevum</a>
+            <a class="active"href="{{ url_for('ASBOT') }}">ASBOT</a>
         </div>
-        <div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
-            <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-            <script type="text/javascript">
-            document.addEventListener("adobe_dc_view_sdk.ready", function(){
-                var adobeDCView = new AdobeDC.View({clientId: "cb6bce67f5614c06897c44fbfab478e5", divId: "adobe-dc-view"});
-                adobeDCView.previewFile({
-                content:{ location:
-                    { url: "https://publicinterestnetwork.org/wp-content/uploads/2023/07/Vape-Waste-Full-Report-PIRG.pdf"}},
-                metaData:{fileName: "Bodea Brochure.pdf"}
-                },
-                {
-                embedMode: "SIZED_CONTAINER"
-                });
-            });
-            </script>
-        </div>
-
-        <embed src="https://publicinterestnetwork.org/wp-content/uploads/2023/07/Vape-Waste-Full-Report-PIRG.pdf" width="500" height="375" type="application/pdf">
+        <h1 class="centered">What is ASBOT?</h1>
+        <p class="centered">
+            ASBOT (Aevum Secundī Bellī Orbis Terrārum) is a history of the Second World War written entirely in Latin (except citations, which are in English)
+            <br>I aim for it to be one of the most complete histories of the war, drawing on a wide range of both primary and secondary sources.
+            <br>The PDF below is free to read, download, and share under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+            <br>Under the terms of this license, you are free to share this document, create derivative works, etc. so long as you attribute me or the IARF as creators,
+            <br>license the derivative works under the same terms and conditions, and do not use this or any derivative works fo commercial purposes
+            <br>(among other terms and conditions specified in the license).
+        </p>
+        <embed id="centered" src="{{url_for('static', filename='documents/unfinished.pdf')}}" width="1000" height="1100" type="application/pdf">
     </body>
 </html>
